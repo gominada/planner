@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    body {
+        background-image: url("/assests/abstract.jpg");
+        background-repeat: repeat;
+        background-size: contain;
+        font-size: 2rem;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    height: 90vh;
+    margin-top: 4vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    border-radius: 5px;
+
+    .date {
+        margin-bottom: 0.7%;
+    }
+
+    tbody {
+        flex-grow: 1;
+        border: 3px solid rgb(88, 219, 251);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        background-color: rgba(255, 255, 255, 0.973);
+
+        tr {
+            border: 1.5px solid rgb(165, 180, 1);
+            flex: 1;
+            display: flex;
+            flex: row;
+
+            .hour {
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .slot {
+                flex: 1;
+                display: flex;
+            }
+
+        }
+    }
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+
+    &:focus {
+        outline: none;
+        border: 0.5rem solid;
+        border-radius: 7%;
+        border-color: #00ccc28c;
+    }
+}
+
+
+.task {
+    display: flex;
+    flex-grow: 1;
+
+    button {
+        font-weight: 900;
+        color: white;
+        border: none;
+        box-shadow: none;
+        transition: 705ms;
+        transform: translateY(0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+
+
+        /* Bubble-like shape */
+        border-radius: 67% 33% 28% 72% / 59% 52% 48% 41%;
+        /* border-radius: 21% 50% 23% 33%; // Old shape */
+
+        &::before {
+            /* Big bubble inside */
+            content: '';
+            position: absolute;
+            width: 18%;
+            height: 18%;
+            background-color: #ffffffc8;
+            top: 15%;
+            left: 25%;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        &::after {
+            /* Little bubble inside*/
+            content: '';
+            position: absolute;
+            width: 8%;
+            height: 8%;
+            background-color: #ffffffc8;
+            top: 35%;
+            left: 38%;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        &:hover {
+            transition: 305ms;
+            background: linear-gradient(90deg, #69fde285 0%, #f1fb83a2 100%);
+        }
+
+        &:active {
+            /* background: linear-gradient(90deg, #69fde2 0%, #f1fb83 100%); */
+            background: linear-gradient(90deg, #00ffd0 0%, #eaff00 100%);
+        }
+    }
+}
+
+.done {
+    background: linear-gradient(90deg, #00e696 0%, #cee100 100%);
+    /* Testing colors */
+    background: linear-gradient(90deg, #00cc85 0%, #bbcc00 100%);
+    background: linear-gradient(90deg, #00eece 0%, #d4e700 100%);
+    border: solid rgba(20, 169, 30, 0.649) 2px;
+    box-shadow: none;
+}
+
+.delete {
+    position: absolute;
+    color: rgb(179, 179, 179);
+    left: 95%;
+    top: 2%;
+    font-weight: 900;
+    border: none;
+    box-shadow: none;
+    border-radius: 21% 50% 23% 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    background: none;
+}
+
+.statistics {
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.to-delete,
+.active {
+    color: #fff;
+    background: linear-gradient(90deg, #cc3600 0%, #cc8100 100%);
+    border: solid rgba(191, 49, 27, 0.649) 2px;
+    border-radius: 30%;
+}
