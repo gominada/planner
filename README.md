@@ -27,8 +27,7 @@ This project is still under development, and the current deployment uses the PHP
 php -S localhost:<port> -t public
 ```
 
-Make sure to replace <port> with the port number you prefer (e.g., 8000), and the app will be accessible at http://localhost:`<port>`.
-
+Make sure to replace <port> with the port number you prefer (e.g., 8000)
 
 ## 🛠️ **Tech Stack**
 
