@@ -1,4 +1,4 @@
-import { calendarChangeBehaviour, bubbleButtonsBehaviour, deleteButtonBehaviour, tasksDragAndDropBehaviour, populateSlotsByDate, statisticsButtonBehaviour } from './functions.js'
+import { calendarChangeBehaviour, bubbleButtonsBehaviour, deleteButtonBehaviour, tasksDragAndDropBehaviour, populateSlotsByDate } from './functions.js'
 
 // Calendar 
 const calendar = document.querySelector('input.date')
